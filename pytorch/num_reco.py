@@ -1,3 +1,4 @@
+import os
 import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
@@ -64,31 +65,35 @@ def load_image(image_path):
     return image  # 返回处理后的图像
 
 def main():
-    # train_data = get_data_loader(is_train=True)  # 加载训练数据
-    # test_data = get_data_loader(is_train=False)  # 加载测试数据
-    # net = Net()  # 初始化神经网络模型
-    #
-    # # 训练模型
-    # optimizer = torch.optim.Adam(net.parameters(), lr=0.001)  # 定义Adam优化器
-    # for epoch in range(2):  # 训练2个epoch
-    #     for (x, y) in train_data:
-    #         net.zero_grad()  # 清零梯度
-    #         output = net.forward(x.view(-1, 28*28))  # 前向传播计算输出
-    #         loss = torch.nn.functional.nll_loss(output, y)  # 计算损失
-    #         loss.backward()  # 反向传播计算梯度
-    #         optimizer.step()  # 更新模型参数
-    #     print("epoch", epoch, "accuracy:", evaluate(test_data, net))  # 打印每个epoch后的准确率
-    #
-    # # 保存模型
-    # save_model(net)
-    #
-    # # 加载模型
+    current_dir = os.path.dirname(os.path.abspath(__file__))  # 获取当前脚本所在目录
+
+    train_data = get_data_loader(is_train=True)  # 加载训练数据
+    test_data = get_data_loader(is_train=False)  # 加载测试数据
+    net = Net()  # 初始化神经网络模型
+
+    # 训练模型
+    optimizer = torch.optim.Adam(net.parameters(), lr=0.001)  # 定义Adam优化器
+    for epoch in range(2):  # 训练2个epoch
+        for (x, y) in train_data:
+            net.zero_grad()  # 清零梯度
+            output = net.forward(x.view(-1, 28*28))  # 前向传播计算输出
+            loss = torch.nn.functional.nll_loss(output, y)  # 计算损失
+            loss.backward()  # 反向传播计算梯度
+            optimizer.step()  # 更新模型参数
+        print("epoch", epoch, "accuracy:", evaluate(test_data, net))  # 打印每个epoch后的准确率
+
+    # 保存模型
+    model_path = os.path.join(current_dir, "mnist_model.pth")
+    save_model(net, model_path)
+
+    # 加载模型
     net = Net()  # 初始化新的神经网络模型
-    # load_model(net)  # 加载已保存的模型权重
-    # print("Loaded model accuracy:", evaluate(test_data, net))  # 打印加载模型后的准确率
+    load_model(net,model_path)  # 加载已保存的模型权重
+    print("Loaded model accuracy:", evaluate(test_data, net))  # 打印加载模型后的准确率
 
     # 使用模型预测新图像
-    image_path = "8.png"  # 替换为你要预测的图像路径
+    image_path = os.path.join(current_dir, "8.png")  # 将图像路径指定到当前目录
+
     image = load_image(image_path)  # 加载并预处理图像
     prediction = predict_image(image, net)  # 使用模型进行预测
     print(f"Predicted digit: {prediction}")  # 打印预测结果
