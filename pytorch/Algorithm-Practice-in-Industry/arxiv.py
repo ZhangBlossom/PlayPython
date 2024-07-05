@@ -17,6 +17,7 @@ LIMITS = int(os.environ.get('LIMITS', 3))
 CAIYUN_TOKEN = os.environ.get("CAIYUN_TOKEN", None)
 FEISHU_URL = os.environ.get("FEISHU_URL", None)
 
+# 翻译
 def translate(source, direction='en2zh', CAIYUN_TOKEN=CAIYUN_TOKEN):
     url = "http://api.interpreter.caiyunai.com/v1/translator"
 
