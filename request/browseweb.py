@@ -5,7 +5,33 @@ import random
 # 目标URL列表
 urls = [
     'https://zhangblossom.blog.csdn.net/article/details/137224076?spm=1001.2014.3001.5502',
-    'https://zhangblossom.blog.csdn.net/article/details/137184049?spm=1001.2014.3001.5502'
+    'https://zhangblossom.blog.csdn.net/article/details/137184049?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/136355833?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/136085994?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/135503336?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/134354438?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/133522946?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/140294477?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/140136559?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/140128893?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139885858?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139885573?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139885354?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139885354?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139504022?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139531517?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139531211?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139507451?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139507371?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139506203?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139506037?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139505881?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139505545?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/139505193?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/138213527?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/138114436?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/138114367?spm=1001.2014.3001.5502',
+    'https://zhangblossom.blog.csdn.net/article/details/138114270?spm=1001.2014.3001.5502'
 ]
 
 # User-Agent 列表
