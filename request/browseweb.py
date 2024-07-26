@@ -45,7 +45,7 @@ user_agents = [
 count = 0
 max_attempts = 10  # 最大尝试次数
 
-for attempt in range(max_attempts):
+while True:
     try:
         for url in urls:
             # 随机选择一个 User-Agent
