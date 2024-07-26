@@ -56,7 +56,7 @@ while True:
                 print(f'访问成功 {url}，当前成功次数：{count}')
             else:
                 print(f'访问失败 {url}，状态码：{response.status_code}')
-        time.sleep(60)  # 休眠时间可以根据需要调整
+        time.sleep(30)  # 休眠时间可以根据需要调整
     except requests.RequestException as e:
         print(f'发生网络异常：{e}，将在60秒后重试')
-        time.sleep(60)
+        time.sleep(30)
