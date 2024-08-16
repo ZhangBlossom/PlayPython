@@ -31,7 +31,8 @@ urls = [
     'https://zhangblossom.blog.csdn.net/article/details/138213527?spm=1001.2014.3001.5502',
     'https://zhangblossom.blog.csdn.net/article/details/138114436?spm=1001.2014.3001.5502',
     'https://zhangblossom.blog.csdn.net/article/details/138114367?spm=1001.2014.3001.5502',
-    'https://zhangblossom.blog.csdn.net/article/details/138114270?spm=1001.2014.3001.5502'
+    'https://zhangblossom.blog.csdn.net/article/details/138114270?spm=1001.2014.3001.5502',
+    'https://blog.csdn.net/Zhangsama1/article/details/141124289?spm=1001.2014.3001.5501'
 ]
 
 # User-Agent 列表
